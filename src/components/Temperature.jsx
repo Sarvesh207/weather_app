@@ -43,7 +43,7 @@ function Temperature({
         <div className="flex justify-center items-center flex-col gap-2">
           <img
             className="w-10 h-10"
-            src="../../public/pressure-white.png"
+            src="../../public/Pressure.png"
             alt=""
           />
           <p>{pressure}</p>
