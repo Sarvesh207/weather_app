@@ -7,7 +7,7 @@ import Error from "./components/Error";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState("Pune");
   const [error, setError] = useState(false)
 
   console.dir(weatherData);
@@ -15,7 +15,7 @@ const App = () => {
   const getWeatherData = async () => {
     try {
         const res =
-          await fetch(`http://api.weatherapi.com/v1/forecast.json?key=98f52081122f432ab0052329242704&q=${city}&days=5&aqi=no&alerts=no
+          await fetch(`https://api.weatherapi.com/v1/forecast.json?key=98f52081122f432ab0052329242704&q=${city}&days=5&aqi=no&alerts=no
             `);
             if(!res.ok) {
                 throw new Error("City not found")
